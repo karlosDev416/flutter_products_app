@@ -9,7 +9,8 @@ class Product {
       {required this.available,
       required this.name,
       this.picture,
-      required this.price});
+      required this.price,
+      this.id});
 
   bool available;
   String name;
@@ -34,4 +35,7 @@ class Product {
         "picture": picture,
         "price": price,
       };
+
+  Product copy() => Product(
+      available: available, name: name, picture: picture, price: price, id: id);
 }
